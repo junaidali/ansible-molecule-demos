@@ -7,9 +7,9 @@ lint:
   name: yamllint
 platforms:
   - name: instance
-    image: ami-a5b196c0
+    image: ami-0c6b1d09930fac512
     instance_type: t2.micro
-    vpc_subnet_id: subnet-6456fd1f
+    vpc_subnet_id: subnet-54b0bf22
 provisioner:
   name: ansible
   lint:
@@ -18,3 +18,5 @@ verifier:
   name: testinfra
   lint:
     name: flake8
+  options:
+    v: 4
